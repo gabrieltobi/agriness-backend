@@ -1,3 +1,8 @@
+### Para rodar
 - Clonar o projeto
 - Executar 'npm i'
-- Executar 'npm run start'
+- Executar 'npm start'
+
+### Para testar
+- Executar o projeto com as instruções acima
+- Executar 'npm test'
