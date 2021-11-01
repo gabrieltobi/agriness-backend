@@ -43,6 +43,16 @@ module.exports = (app) => {
     }
   };
 
+  controller.updateAnimal = async (req, res) => {
+    try {
+      const { fid, ...data } = req.body;
+      const doc = await app.data.db.collection("animals").doc(fid).update(data);
+      return res.status(200).json({ fid: doc.id });
+    } catch (e) {
+      return res.status(500).json({ message: e.message });
+    }
+  };
+
   controller.deleteAnimal = async (req, res) => {
     try {
       await app.data.db.collection("animals").doc(req.query.fid).delete();

@@ -3,5 +3,6 @@ module.exports = (app) => {
 
   app.route("/api/v1/animals").get(controller.getAnimals);
   app.route("/api/v1/animals").put(controller.addAnimal);
+  app.route("/api/v1/animals").post(controller.updateAnimal);
   app.route("/api/v1/animals").delete(controller.deleteAnimal);
 };
